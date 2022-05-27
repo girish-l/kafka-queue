@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  auth:
+    build:
+      context: ./docker/php
+      dockerfile: Dockerfile
+    container_name: kafka-queue-php
+    volumes:
+      - ./:/var/www/html
