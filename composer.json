@@ -1,5 +1,5 @@
 {
-    "name": "m/kafka-queue",
+    "name": "girish-l/kafka-queue",
     "autoload": {
         "psr-4": {
             "M\\KafkaQueue\\": "src/"
