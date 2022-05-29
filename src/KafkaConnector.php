@@ -21,6 +21,8 @@ class KafkaConnector implements ConnectorInterface
         $conf->set('group.id', $config['group_id']);
         $conf->set('auto.offset.reset', 'earliest');
 
-        return new KafkaQueue($producer);
+        $consumer = new \RdKafka\KafkaConsumer($conf);
+
+        return new KafkaQueue($producer, $consumer);
     }
 }
